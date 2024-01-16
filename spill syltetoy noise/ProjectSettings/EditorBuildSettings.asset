@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/DodsScene.unity
+    guid: 2983223b586993e4d8441dc23d3fd923
+  - enabled: 1
+    path: Assets/Scenes/startscene.unity
+    guid: ce067eeb2b26965448df820e5ef9c0e8
+  - enabled: 0
+    path: Assets/Scenes/SteinSaksPapirScene.unity
+    guid: 23687ccc7f1ec2e4aa70f8f35c4e8bbd
+  - enabled: 1
+    path: Assets/Scenes/BaneForsok.unity
+    guid: e6e46fe7d98474c48af69d5ef2705d3f
+  - enabled: 1
+    path: Assets/Scenes/Mordi Vant.unity
+    guid: 1b9116c48ea710b46b5198cb7196e8cc
+  - enabled: 1
+    path: Assets/Scenes/Fardi Vant.unity
+    guid: 4c8c177c0dfef1841874870ca2abff27
+  m_configObjects: {}
