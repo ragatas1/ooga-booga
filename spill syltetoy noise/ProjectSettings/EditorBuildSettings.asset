@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DodsScene.unity
     guid: 2983223b586993e4d8441dc23d3fd923
   - enabled: 1
+    path: Assets/Scenes/StartStart.unity
+    guid: 85f602eb6aa96b44da6ac7500aa047ba
+  - enabled: 1
     path: Assets/Scenes/startscene.unity
     guid: ce067eeb2b26965448df820e5ef9c0e8
   - enabled: 0

@@ -11,7 +11,7 @@ public class LogikkScript : MonoBehaviour
 {
     public TextMeshProUGUI score1Text;
     public TextMeshProUGUI score2Text;
-    public Canvas uI;
+    public GameObject uI;
     public TextMeshProUGUI timer;
     public AudioSource BonkSoundEffect;
     public int spiller1Score;
@@ -25,6 +25,7 @@ public class LogikkScript : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this);
+        DontDestroyOnLoad(uI);
         DontDestroyOnLoad(uI);
         BonkSoundEffect.time = 0.25f;
     }
@@ -41,6 +42,11 @@ public class LogikkScript : MonoBehaviour
         BonkSoundEffect.Play();
         spiller2Score = spiller2Score + 1;
         score2Text.text = spiller2Score.ToString();
+    }
+    private void Start()
+    {
+        Scene curentScene = SceneManager.GetActiveScene();
+        string sceneName = curentScene.name;
     }
     private void Update()
     {
@@ -67,20 +73,24 @@ public class LogikkScript : MonoBehaviour
             SceneManager.LoadScene("Mordi Vant");
             spiller1Score = 0;
             spiller2Score = 0;
-            Destroy(uI);
         }
         if (spiller2Score >= hvorMyeForAVinne)
         {
             SceneManager.LoadScene("Fardi Vant");
             spiller1Score = 0;
             spiller2Score = 0;
-            Destroy(uI);
         }
         if (Input.GetButton("Lukk"))
         {
-            Destroy(uI);
             SceneManager.LoadScene("startscene");
-            Destroy(gameObject);
+        }
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("BaneForsok"))
+        {
+            uI.SetActive(true);
+        }
+        else
+        {
+            uI.SetActive (false);
         }
     }
 }
